@@ -1,0 +1,5 @@
+1. PreferredSizeWidget, kToolbarHeight - Home App Bar
+2. Dependency overrides - Pubspec.yaml
+3. Equatable, Very Good Analysis, Flutter Gen Runner and Envied packages - Pubspec.yaml
+4.*.ipa - .gitignore
+5. enum - locales.dart

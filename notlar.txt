@@ -1,0 +1,2 @@
+1. folder create code -mkdir  module- example mkdir module
+2. package create code - flutter create --template=package packageName example flutter create --template=package common
