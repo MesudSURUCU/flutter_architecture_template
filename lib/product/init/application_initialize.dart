@@ -14,6 +14,7 @@ import 'package:logger/logger.dart';
 final class ApplicationInitialize {
   /// Project basic required initialize
   Future<void> make() async {
+    WidgetsFlutterBinding.ensureInitialized();
     await runZonedGuarded<Future<void>>(_initialize, (error, stack) {
       Logger().e(error);
     });
@@ -21,7 +22,6 @@ final class ApplicationInitialize {
 
   /// This method is used to initialize the application with the required
   Future<void> _initialize() async {
-    WidgetsFlutterBinding.ensureInitialized();
     await EasyLocalization.ensureInitialized();
     EasyLocalization.logger.enableLevels = [LevelMessages.error];
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
