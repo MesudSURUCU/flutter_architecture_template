@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gen/gen.dart';
 
 /// The `CustomColorScheme` class provides
 /// a set of predefined themes for the app
@@ -22,7 +23,7 @@ final class CustomColorScheme {
     onTertiary: Color(0xffffffff),
     tertiaryContainer: Color(0xfffad8fd),
     onTertiaryContainer: Color(0xff573e5c),
-    error: Color(0xffba1a1a),
+    error: ColorName.crimsonRed,
     onError: Color(0xffffffff),
     errorContainer: Color(0xffffdad6),
     onErrorContainer: Color(0xff93000a),
@@ -72,7 +73,7 @@ final class CustomColorScheme {
     onTertiary: Color(0xffffffff),
     tertiaryContainer: Color(0xff7f6484),
     onTertiaryContainer: Color(0xffffffff),
-    error: Color(0xff740006),
+    error: ColorName.crimsonRed,
     onError: Color(0xffffffff),
     errorContainer: Color(0xffcf2c27),
     onErrorContainer: Color(0xffffffff),
@@ -122,7 +123,7 @@ final class CustomColorScheme {
     onTertiary: Color(0xffffffff),
     tertiaryContainer: Color(0xff59405e),
     onTertiaryContainer: Color(0xffffffff),
-    error: Color(0xff600004),
+    error: ColorName.crimsonRed,
     onError: Color(0xffffffff),
     errorContainer: Color(0xff98000a),
     onErrorContainer: Color(0xffffffff),
@@ -172,7 +173,7 @@ final class CustomColorScheme {
     onTertiary: Color(0xff3f2844),
     tertiaryContainer: Color(0xff573e5c),
     onTertiaryContainer: Color(0xfffad8fd),
-    error: Color(0xffffb4ab),
+    error: ColorName.crimsonRed,
     onError: Color(0xff690005),
     errorContainer: Color(0xff93000a),
     onErrorContainer: Color(0xffffdad6),
@@ -222,7 +223,7 @@ final class CustomColorScheme {
     onTertiary: Color(0xff331d39),
     tertiaryContainer: Color(0xffa487a9),
     onTertiaryContainer: Color(0xff000000),
-    error: Color(0xffffd2cc),
+    error: ColorName.crimsonRed,
     onError: Color(0xff540003),
     errorContainer: Color(0xffff5449),
     onErrorContainer: Color(0xff000000),
@@ -272,7 +273,7 @@ final class CustomColorScheme {
     onTertiary: Color(0xff000000),
     tertiaryContainer: Color(0xffd8b8dc),
     onTertiaryContainer: Color(0xff16041d),
-    error: Color(0xffffece9),
+    error: ColorName.crimsonRed,
     onError: Color(0xff000000),
     errorContainer: Color(0xffffaea4),
     onErrorContainer: Color(0xff220001),

@@ -6,15 +6,24 @@ import 'package:google_fonts/google_fonts.dart';
 /// Custom dark theme implementation
 final class CustomLlightTheme implements CustomTheme {
   @override
-  // TODO(mesudsurucu): change to initilize ThemeData instead of computed
   ThemeData get themeData => ThemeData(
         useMaterial3: true,
         colorScheme: CustomColorScheme.lightColorScheme,
         fontFamily: GoogleFonts.roboto().fontFamily,
         floatingActionButtonTheme: floatingActionButtonThemeData,
+        elevatedButtonTheme: elevatedButtonThemeData,
       );
 
   @override
   final FloatingActionButtonThemeData floatingActionButtonThemeData =
       const FloatingActionButtonThemeData();
+
+  /// Elevated button theme data
+  final ElevatedButtonThemeData elevatedButtonThemeData =
+      ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: CustomColorScheme.lightColorScheme.primary,
+      foregroundColor: CustomColorScheme.lightColorScheme.onPrimary,
+    ),
+  );
 }
