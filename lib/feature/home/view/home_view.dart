@@ -10,9 +10,10 @@ import 'package:kartal/kartal.dart';
 
 part 'widget/home_app_bar.dart';
 
-/// asd
+/// The `HomeView` class is a StatefulWidget that represents the home screen
 class HomeView extends StatefulWidget {
-  ///
+  /// Constructor for the `HomeView` class
+  /// It initializes the home view with a key for state management
   const HomeView({super.key});
 
   @override
