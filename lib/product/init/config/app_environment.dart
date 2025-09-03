@@ -1,7 +1,5 @@
-import 'package:architecture_template/product/init/config/app_configuration.dart';
-import 'package:architecture_template/product/init/config/dev_env.dart';
-import 'package:architecture_template/product/init/config/prod_env.dart';
 import 'package:flutter/foundation.dart';
+import 'package:gen/gen.dart';
 
 /// Application environment configuration
 /// This class provides access to the application's configuration settings
@@ -14,7 +12,7 @@ final class AppEnvironment {
 
   /// General application environment setup
   AppEnvironment.general() {
-    _configuration = kDebugMode ? DevEnv() : ProdEnv();
+    _configuration = !kDebugMode ? DevEnv() : ProdEnv();
   }
 
   static late final AppConfiguration _configuration;

@@ -1,11 +1,11 @@
-import 'package:architecture_template/product/init/config/app_configuration.dart';
 import 'package:envied/envied.dart';
+import 'package:gen/src/environment/app_configuration.dart';
 
 part 'prod_env.g.dart';
 
 @Envied(
   obfuscate: true,
-  path: 'asset/env/.prod.env',
+  path: 'assets/env/.prod.env',
 )
 
 /// Production environment configuration (ProdEnv)
