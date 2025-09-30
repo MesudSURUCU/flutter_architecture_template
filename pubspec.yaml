@@ -7,7 +7,7 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
-
+  auto_route: ^7.8.4
   cupertino_icons: ^1.0.8
   easy_localization: ^3.0.8 #config
   easy_logger: ^0.0.2 # utility
@@ -28,11 +28,13 @@ dependencies:
   gen:
     path: module/gen
   
+  
 # dependecy_overrides:
 #   cupertino_icons: ^1.0.7
 
 dev_dependencies:
-
+  auto_route_generator: ^7.3.2
+  build_runner: ^2.4.6
   flutter_launcher_icons: ^0.14.4
   flutter_lints: ^4.0.0
   flutter_test:

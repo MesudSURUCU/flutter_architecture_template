@@ -4,6 +4,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.fontFamily": "JetBrains Mono",
+    "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml",
         ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
