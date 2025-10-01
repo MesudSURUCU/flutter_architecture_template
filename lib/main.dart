@@ -20,6 +20,7 @@ class _MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       routerConfig: _appRouter.config(),
       theme: CustomLlightTheme().themeData, // Use light theme by default
       // Use dark theme when system is in dark mode

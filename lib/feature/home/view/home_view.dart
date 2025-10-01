@@ -34,6 +34,45 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(''.ext.version),
+            Text(
+              'Example',
+              style: context.general.textTheme.titleLarge?.copyWith(
+                color: 'FCD7DF'.ext.color,
+              ),
+            ),
+            SizedBox(
+              height: context.sized.dynamicHeight(0.01),
+            ),
+            _fetchHomeData().ext.toBuild(
+                  onSuccess: onSuccess,
+                  loadingWidget: const Text('Loading...'),
+                  notFoundWidget: const Text('Not Found'),
+                  onError: const Text('Error'),
+                ),
+            FloatingActionButton(
+              onPressed: () {
+                'Pendik'.ext.launchMaps();
+                CustomLinkPreview.getLinkPreviewData('www.google.com');
+                CustomLogger.showError<String>('Error message');
+
+                final dummyUser = List<User?>.generate(
+                  10,
+                  (index) => User(name: 'User $index', money: index * 100.0),
+                );
+
+                final items = dummyUser
+                    .where((element) {
+                      if (element?.money == null) return false;
+                      return element!.money! > 500;
+                    })
+                    .exts
+                    .makeSafeCustom(
+                      (value) => value?.name.ext.isNotNullOrNoEmpty ?? false,
+                    );
+              },
+              child: const Icon(Icons.add),
+            ),
             Assets.icons.icMenuInfo.svg(
               package: 'gen',
             ),
@@ -57,11 +96,13 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
             const Text('Change Language'),
             ElevatedButton(
               onPressed: () async {
-                /*    ProductLocalization.updateLanguage(
+                await ProductLocalization.updateLanguage(
                   context: context,
                   value: Locales.en,
-                ); */
-                await context.router.push<bool?>(HomeDetailRoute(id: '1'));
+                );
+                if (context.mounted) {
+                  await context.router.push<bool?>(HomeDetailRoute(id: '1'));
+                }
               },
               child: Text(
                 LocaleKeys.general_button_save,
@@ -76,4 +117,26 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
       ),
     );
   }
+
+  Future<String?> _fetchHomeData() async {
+    return 'Merhaba 👋';
+  }
+
+  Widget onSuccess(String? data) {
+    return Text('Data: $data');
+  }
+
+  void calculateUser(List<String> items) {}
+}
+
+/// A simple User class with name and money properties.
+class User {
+  /// Constructor for the User class
+  User({required this.name, required this.money});
+
+  /// The name of the user
+  final String? name;
+
+  /// The amount of money the user has
+  final double? money;
 }
