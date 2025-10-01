@@ -4,6 +4,7 @@ import 'package:architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:architecture_template/product/init/product_localization.dart';
 import 'package:architecture_template/product/navigation/app_router.dart';
 import 'package:architecture_template/product/utility/constants/enums/locales.dart';
+import 'package:architecture_template/product/widget/project_network_image.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,10 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
             Assets.icons.icMenuInfo.svg(
               package: 'gen',
             ),
+            const ProjectNetworkImage(
+              url:
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+            ),
             Assets.lottie.animTaksiLoader.lottie(package: 'gen'),
             Assets.images.imgProfit.image(package: 'gen'),
             ElevatedButton(
@@ -56,8 +61,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                   context: context,
                   value: Locales.en,
                 ); */
-                final response =
-                    await context.router.push<bool?>(HomeDetailRoute(id: '1'));
+                await context.router.push<bool?>(HomeDetailRoute(id: '1'));
               },
               child: Text(
                 LocaleKeys.general_button_save,

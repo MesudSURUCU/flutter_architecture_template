@@ -22,11 +22,15 @@ dependencies:
   logger: ^2.6.0 # utility
   vexana: ^5.0.3 # network
 
+  # Modules
   widgets:
     path: module/widgets
 
   gen:
     path: module/gen
+
+  common:
+    path: module/common
   
   
 # dependecy_overrides:
