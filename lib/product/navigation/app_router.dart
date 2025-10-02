@@ -16,6 +16,8 @@ final class AppRouter extends _$AppRouter {
           page: HomeRoute.page,
           initial: true,
         ),
-        AutoRoute(page: HomeDetailRoute.page),
+        AutoRoute(
+          page: HomeDetailRoute.page,
+        ),
       ];
 }

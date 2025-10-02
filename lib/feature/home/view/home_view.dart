@@ -61,7 +61,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                   (index) => User(name: 'User $index', money: index * 100.0),
                 );
 
-                final items = dummyUser
+                dummyUser
                     .where((element) {
                       if (element?.money == null) return false;
                       return element!.money! > 500;
