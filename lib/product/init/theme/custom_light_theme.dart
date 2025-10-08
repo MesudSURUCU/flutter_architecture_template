@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /// Custom dark theme implementation
-final class CustomLlightTheme implements CustomTheme {
+final class CustomLightTheme implements CustomTheme {
   @override
   ThemeData get themeData => ThemeData(
         useMaterial3: true,

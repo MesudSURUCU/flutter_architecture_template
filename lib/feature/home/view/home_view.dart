@@ -82,6 +82,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
             ),
             Assets.lottie.animTaksiLoader.lottie(package: 'gen'),
             Assets.images.imgProfit.image(package: 'gen'),
+            Assets.icons.icMenuInfo.svg(package: 'gen'),
             ElevatedButton(
               onPressed: () {
                 ProductLocalization.updateLanguage(
