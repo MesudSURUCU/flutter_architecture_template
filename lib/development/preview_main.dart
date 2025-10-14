@@ -3,13 +3,20 @@ import 'package:architecture_template/product/init/product_localization.dart';
 import 'package:architecture_template/product/init/theme/custom_dark_theme.dart';
 import 'package:architecture_template/product/init/theme/custom_light_theme.dart';
 import 'package:architecture_template/product/navigation/app_router.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:widgets/widgets.dart';
 
 void main() async {
   await ApplicationInitialize().make();
-  runApp(ProductLocalization(child: const _MyApp()));
+  runApp(
+    DevicePreview(
+      builder: (context) => ProductLocalization(
+        child: const _MyApp(),
+      ),
+    ),
+  );
 }
 
 /// The `MyApp` class is a StatelessWidget in Dart that builds a

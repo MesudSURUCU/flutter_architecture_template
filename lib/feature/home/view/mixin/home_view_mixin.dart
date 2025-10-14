@@ -1,6 +1,5 @@
 import 'package:architecture_template/feature/home/view/home_view.dart';
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets.dart';
 
 /// This Dart code defines a mixin named `HomeViewMixin` that is applied to the
 /// state of a `HomeView` widget.
@@ -12,6 +11,5 @@ mixin HomeViewMixin on State<HomeView> {
   @override
   void initState() {
     super.initState();
-    Example();
   }
 }
