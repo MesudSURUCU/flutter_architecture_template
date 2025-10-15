@@ -31,6 +31,24 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const _HomeAppBar(),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            child: const Text('Scs'),
+            onPressed: () {
+              SuccessDialog.show(context: context, title: 'Success');
+            },
+          ),
+          SizedBox(height: context.sized.dynamicHeight(0.02)),
+          FloatingActionButton(
+            child: const Text('Que'),
+            onPressed: () {
+              QuestionDialog.show(context: context, title: 'Question');
+            },
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -79,8 +97,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                 package: 'gen',
               ),
               const ProjectNetworkImage(
-                url:
-                    'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                url: 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
               ),
               Assets.lottie.animTaksiLoader.lottie(package: 'gen'),
               Assets.images.imgProfit.image(package: 'gen'),
@@ -109,8 +126,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                 },
                 child: Text(
                   LocaleKeys.general_button_save,
-                  style: context.general.textTheme.bodySmall
-                      ?.copyWith(color: ColorName.crimsonRed),
+                  style: context.general.textTheme.bodySmall?.copyWith(color: ColorName.crimsonRed),
                 ).tr(
                   args: ['example'],
                 ),

@@ -7,41 +7,38 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
-  auto_route: ^7.8.4
+  auto_route: ^7.8.4 # navigation
+  common:  # module
+    path: module/common
   cupertino_icons: ^1.0.8
+  device_preview: ^1.3.1 # utility
   easy_localization: ^3.0.8 #config
   easy_logger: ^0.0.2 # utility
   equatable: ^2.0.7 # core
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.6.1 # state management
-  flutter_svg: ^2.1.0
+  flutter_svg: ^2.1.0 # utility
+  gen:  # module
+    path: module/gen
   google_fonts: ^6.3.0 # utility
   json_annotation: ^4.9.0 # config
   kartal: ^4.1.0 # utility
   logger: ^2.6.0 # utility
   vexana: ^5.0.3 # network
-
-  # Modules
-  widgets:
+  widgets:   # module
     path: module/widgets
 
-  gen:
-    path: module/gen
 
-  common:
-    path: module/common
-  device_preview: ^1.3.1
   
   
 # dependecy_overrides:
 #   cupertino_icons: ^1.0.7
 
 dev_dependencies:
-  auto_route_generator: ^7.3.2
-  build_runner: ^2.4.6
-  flutter_launcher_icons: ^0.14.4
-  flutter_lints: ^4.0.0
+  auto_route_generator: ^7.3.2 # navigation
+  build_runner: ^2.4.6 # code generation
+  flutter_launcher_icons: ^0.14.4 # utility
   flutter_test:
     sdk: flutter
   # vb10:
