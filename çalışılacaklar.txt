@@ -3,3 +3,4 @@
 3. Equatable, Very Good Analysis, Flutter Gen Runner and Envied packages - Pubspec.yaml
 4.*.ipa - .gitignore
 5. enum - locales.dart
+6. VoidCallback - ValueChanged - AsyncValueGetter ve AsyncValueSetter

@@ -126,7 +126,9 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                 },
                 child: Text(
                   LocaleKeys.general_button_save,
-                  style: context.general.textTheme.bodySmall?.copyWith(color: ColorName.crimsonRed),
+                  style: context.general.textTheme.bodySmall?.copyWith(
+                    color: ColorName.crimsonRed,
+                  ),
                 ).tr(
                   args: ['example'],
                 ),
