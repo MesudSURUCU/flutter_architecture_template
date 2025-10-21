@@ -1,6 +1,9 @@
 import 'package:architecture_template/product/widget/button/normal_button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:widgets/widgets.dart';
+
+part 'custom_login_button_mixin.dart';
 
 /// A custom login button widget that shows a loading indicator when pressed.
 final class CustomLoginButton extends StatefulWidget {
@@ -13,8 +16,7 @@ final class CustomLoginButton extends StatefulWidget {
   State<CustomLoginButton> createState() => _CustomLoginButtonState();
 }
 
-class _CustomLoginButtonState extends State<CustomLoginButton> {
-  final ValueNotifier<bool> _isLoadingNotifier = ValueNotifier(false);
+class _CustomLoginButtonState extends State<CustomLoginButton> with MountedMixin, _CustomLoginButtonMixin {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -22,15 +24,7 @@ class _CustomLoginButtonState extends State<CustomLoginButton> {
       builder: (BuildContext context, bool value, Widget? child) {
         if (value) return const SizedBox();
         return NormalButton(
-          onPressed: () async {
-            _isLoadingNotifier.value = true;
-            final response = await widget.onOperation.call();
-            if (response) {
-              if (context.mounted) {
-                Navigator.of(context).pop();
-              }
-            }
-          },
+          onPressed: _performLogin,
           title: 'Login',
         );
       },
