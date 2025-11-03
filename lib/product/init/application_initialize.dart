@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:architecture_template/product/init/config/app_environment.dart';
+import 'package:architecture_template/product/state/container/product_state_container.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_logger/easy_logger.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,14 @@ final class ApplicationInitialize {
       Logger().e(details.exceptionAsString());
     };
 
+    _productEnvironmentWithContainer();
+  }
+
+  /// DO NOT CHANGE THİS METHOD
+  void _productEnvironmentWithContainer() {
     AppEnvironment.general();
+
+    /// It must be call after [AppEnvironment.general()]
+    ProductContainer.setup();
   }
 }

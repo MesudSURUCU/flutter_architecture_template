@@ -21,6 +21,7 @@ dependencies:
   flutter_svg: ^2.1.0 # utility
   gen:  # module
     path: module/gen
+  get_it: ^9.0.5
   google_fonts: ^6.3.0 # utility
   json_annotation: ^4.9.0 # config
   kartal: ^4.1.0 # utility

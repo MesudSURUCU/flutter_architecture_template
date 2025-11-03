@@ -27,6 +27,7 @@ final class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> with HomeViewMixin {
+  List<User> _users = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +37,10 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
         children: [
           FloatingActionButton(
             child: const Text('Scs'),
-            onPressed: () {
-              SuccessDialog.show(context: context, title: 'Success');
+            onPressed: () async {
+              _users = await loginService.users();
+              setState(() {});
+              //  SuccessDialog.show(context: context, title: 'Success');
             },
           ),
           SizedBox(height: context.sized.dynamicHeight(0.02)),
@@ -76,7 +79,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                   CustomLinkPreview.getLinkPreviewData('www.google.com');
                   CustomLogger.showError<String>('Error message');
 
-                  final dummyUser = List<User?>.generate(
+/*                   final dummyUser = List<User?>.generate(
                     10,
                     (index) => User(name: 'User $index', money: index * 100.0),
                   );
@@ -89,15 +92,18 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                       .exts
                       .makeSafeCustom(
                         (value) => value?.name.ext.isNotNullOrNoEmpty ?? false,
-                      );
+                      ); */
                 },
                 child: const Icon(Icons.add),
               ),
               Assets.icons.icMenuInfo.svg(
                 package: 'gen',
               ),
-              const ProjectNetworkImage(
-                url: 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+              SizedBox(
+                height: context.sized.dynamicHeight(0.3),
+                child: const ProjectNetworkImage(
+                  url: 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                ),
               ),
               Assets.lottie.animTaksiLoader.lottie(package: 'gen'),
               Assets.images.imgProfit.image(package: 'gen'),
@@ -147,7 +153,21 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
               SizedBox(
                 height: context.sized.dynamicHeight(0.02),
               ),
-              Image.network('https://picsum.photos/500/500'),
+              SizedBox(
+                height: 200,
+                child: Image.network('https://picsum.photos/500/500'),
+              ),
+              ListView.builder(
+                shrinkWrap: true, // Important!
+                physics: const NeverScrollableScrollPhysics(), // Disable internal scrolling
+                itemCount: _users.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    title: Text(_users[index].id.toString()),
+                    subtitle: Text(_users[index].body.toString()),
+                  );
+                },
+              ),
             ],
           ),
         ),
@@ -166,7 +186,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
   void calculateUser(List<String> items) {}
 }
 
-/// A simple User class with name and money properties.
+/* /// A simple User class with name and money properties.
 class User {
   /// Constructor for the User class
   User({required this.name, required this.money});
@@ -177,3 +197,4 @@ class User {
   /// The amount of money the user has
   final double? money;
 }
+ */
