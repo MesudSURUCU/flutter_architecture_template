@@ -15,12 +15,10 @@ final class CustomLightTheme implements CustomTheme {
       );
 
   @override
-  final FloatingActionButtonThemeData floatingActionButtonThemeData =
-      const FloatingActionButtonThemeData();
+  final FloatingActionButtonThemeData floatingActionButtonThemeData = const FloatingActionButtonThemeData();
 
   /// Elevated button theme data
-  final ElevatedButtonThemeData elevatedButtonThemeData =
-      ElevatedButtonThemeData(
+  final ElevatedButtonThemeData elevatedButtonThemeData = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: CustomColorScheme.lightColorScheme.primary,
       foregroundColor: CustomColorScheme.lightColorScheme.onPrimary,

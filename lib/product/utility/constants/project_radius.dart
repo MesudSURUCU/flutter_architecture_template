@@ -9,9 +9,9 @@ enum ProjectRadius {
   /// Large radius value (32.0)
   large(32);
 
-  /// The numeric value of the radius.
-  final double value;
-
   /// Constructor for [ProjectRadius] enum.
   const ProjectRadius(this.value);
+
+  /// The numeric value of the radius.
+  final double value;
 }

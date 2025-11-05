@@ -14,6 +14,5 @@ final class CustomDarkTheme implements CustomTheme {
       );
 
   @override
-  final FloatingActionButtonThemeData floatingActionButtonThemeData =
-      const FloatingActionButtonThemeData();
+  final FloatingActionButtonThemeData floatingActionButtonThemeData = const FloatingActionButtonThemeData();
 }

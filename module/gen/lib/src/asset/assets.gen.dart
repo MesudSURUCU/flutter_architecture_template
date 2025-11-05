@@ -27,8 +27,7 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/ic_menu_info.svg
-  SvgGenImage get icMenuInfo =>
-      const SvgGenImage('assets/icons/ic_menu_info.svg');
+  SvgGenImage get icMenuInfo => const SvgGenImage('assets/icons/ic_menu_info.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [icMenuInfo];
@@ -38,8 +37,7 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   /// File path: assets/images/img_profit.png
-  AssetGenImage get imgProfit =>
-      const AssetGenImage('assets/images/img_profit.png');
+  AssetGenImage get imgProfit => const AssetGenImage('assets/images/img_profit.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [imgProfit];
@@ -49,8 +47,7 @@ class $AssetsLottieGen {
   const $AssetsLottieGen();
 
   /// File path: assets/lottie/anim_taksi_loader.json
-  LottieGenImage get animTaksiLoader =>
-      const LottieGenImage('assets/lottie/anim_taksi_loader.json');
+  LottieGenImage get animTaksiLoader => const LottieGenImage('assets/lottie/anim_taksi_loader.json');
 
   /// List of all assets
   List<LottieGenImage> get values => [animTaksiLoader];
@@ -136,11 +133,9 @@ class AssetGenImage {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
-    : _isVecFormat = false;
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}}) : _isVecFormat = false;
 
-  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
-    : _isVecFormat = true;
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}}) : _isVecFormat = true;
 
   final String _assetName;
   final Size? size;
@@ -194,9 +189,7 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      colorFilter:
-          colorFilter ??
-          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      colorFilter: colorFilter ?? (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );
@@ -225,8 +218,7 @@ class LottieGenImage {
     _lottie.LottieImageProviderFactory? imageProviderFactory,
     Key? key,
     AssetBundle? bundle,
-    Widget Function(BuildContext, Widget, _lottie.LottieComposition?)?
-    frameBuilder,
+    Widget Function(BuildContext, Widget, _lottie.LottieComposition?)? frameBuilder,
     ImageErrorWidgetBuilder? errorBuilder,
     double? width,
     double? height,

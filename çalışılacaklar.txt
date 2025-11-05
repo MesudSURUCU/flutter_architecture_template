@@ -4,3 +4,4 @@
 4.*.ipa - .gitignore
 5. enum - locales.dart
 6. VoidCallback - ValueChanged - AsyncValueGetter ve AsyncValueSetter
+7. Get it paketi

@@ -52,8 +52,7 @@ class HomeDetailRoute extends PageRouteInfo<HomeDetailRouteArgs> {
 
   static const String name = 'HomeDetailRoute';
 
-  static const PageInfo<HomeDetailRouteArgs> page =
-      PageInfo<HomeDetailRouteArgs>(name);
+  static const PageInfo<HomeDetailRouteArgs> page = PageInfo<HomeDetailRouteArgs>(name);
 }
 
 class HomeDetailRouteArgs {
